@@ -1,0 +1,910 @@
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-image: url("fondo.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    height: 78px;
+
+    padding: 0 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #101315;
+
+    border-bottom: 1px solid #292d30;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 21px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.logo strong,
+.logo span {
+    color: #d5a645;
+}
+
+.logo-icon {
+    margin-right: 5px;
+}
+
+nav {
+    display: flex;
+
+    gap: 28px;
+}
+
+nav a {
+    color: #cccccc;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d5a645;
+}
+
+
+/* =====================================================
+   CARRITO HEADER
+===================================================== */
+
+.boton-carrito {
+    background: #d5a645;
+
+    border: none;
+
+    padding: 11px 18px;
+
+    border-radius: 5px;
+
+    color: #111;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.boton-carrito:hover {
+    background: #edc66e;
+
+    transform: translateY(-2px);
+}
+
+#contador {
+    background: #111;
+
+    color: white;
+
+    border-radius: 50%;
+
+    padding: 4px 7px;
+
+    margin-left: 4px;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 80px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 7, 8, .96),
+            rgba(5, 7, 8, .75),
+            rgba(5, 7, 8, .35)
+        ),
+        url("img/moto-fondo.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.hero-contenido {
+    max-width: 650px;
+}
+
+.etiqueta {
+    color: #d5a645;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 70px;
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+
+    font-weight: 900;
+}
+
+.hero h1 span {
+    color: #d5a645;
+}
+
+.descripcion {
+    color: #c4c4c4;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+.boton-principal {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background: #d5a645;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    border-radius: 4px;
+
+    transition: .3s;
+}
+
+.boton-principal:hover {
+    background: #edc66e;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   TÍTULOS
+===================================================== */
+
+.titulo {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.titulo p {
+    color: #d5a645;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+}
+
+.titulo h2 {
+    font-size: 38px;
+}
+
+
+/* =====================================================
+   CATEGORÍAS
+===================================================== */
+
+.categorias {
+    padding: 80px 7%;
+
+    background: #111416;
+}
+
+.categorias-grid {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 15px;
+}
+
+.categorias-grid button {
+    padding: 17px 10px;
+
+    background: #181c1f;
+
+    color: #ddd;
+
+    border: 1px solid #303438;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.categorias-grid button:hover {
+    background: #d5a645;
+
+    color: #111;
+
+    border-color: #d5a645;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   TIENDA
+===================================================== */
+
+.tienda {
+    padding: 90px 7%;
+
+    background: #0b0d0f;
+}
+
+.cabecera-tienda {
+    max-width: 1200px;
+
+    margin: 0 auto 45px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 30px;
+}
+
+.cabecera-tienda h2 {
+    font-size: 38px;
+}
+
+#buscador {
+    width: 310px;
+
+    padding: 14px 18px;
+
+    background: #171a1d;
+
+    border: 1px solid #33383c;
+
+    color: white;
+
+    border-radius: 5px;
+
+    outline: none;
+}
+
+#buscador:focus {
+    border-color: #d5a645;
+}
+
+
+/* =====================================================
+   PRODUCTOS
+===================================================== */
+
+.productos {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.producto {
+    background: #15181b;
+
+    border: 1px solid #292d30;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    transition: .35s;
+}
+
+.producto:hover {
+    transform: translateY(-7px);
+
+    border-color: #d5a645;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.4);
+}
+
+.imagen-producto {
+    height: 230px;
+
+    background: #202428;
+
+    overflow: hidden;
+}
+
+.imagen-producto img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .4s;
+}
+
+.producto:hover .imagen-producto img {
+    transform: scale(1.06);
+}
+
+.producto-info {
+    padding: 25px;
+}
+
+.producto-info small {
+    color: #d5a645;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+}
+
+.producto-info h3 {
+    font-size: 21px;
+
+    margin: 10px 0;
+}
+
+.producto-info p {
+    color: #888;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.producto-abajo {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.producto-abajo strong {
+    font-size: 21px;
+
+    color: white;
+}
+
+.producto-abajo button {
+    padding: 11px 14px;
+
+    background: transparent;
+
+    border: 1px solid #d5a645;
+
+    color: #d5a645;
+
+    border-radius: 4px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.producto-abajo button:hover {
+    background: #d5a645;
+
+    color: #111;
+}
+
+
+/* =====================================================
+   NOSOTROS
+===================================================== */
+
+.nosotros {
+    padding: 100px 8%;
+
+    background: #15181b;
+}
+
+.nosotros-contenido {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.3fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.nosotros h2 {
+    font-size: 42px;
+
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+}
+
+.nosotros p:not(.etiqueta) {
+    color: #999;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+.estadisticas {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.estadisticas div {
+    padding: 25px 15px;
+
+    text-align: center;
+
+    background: #101214;
+
+    border: 1px solid #292d30;
+}
+
+.estadisticas strong {
+    display: block;
+
+    color: #d5a645;
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.estadisticas span {
+    color: #888;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   CONTACTO
+===================================================== */
+
+.contacto {
+    padding: 90px 7%;
+
+    background: #0b0d0f;
+}
+
+.contacto-grid {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.contacto-card {
+    padding: 30px;
+
+    text-align: center;
+
+    background: #15181b;
+
+    border: 1px solid #292d30;
+
+    border-radius: 6px;
+}
+
+.contacto-card span {
+    font-size: 32px;
+
+    display: block;
+
+    margin-bottom: 15px;
+}
+
+.contacto-card h3 {
+    color: #d5a645;
+
+    margin-bottom: 10px;
+}
+
+.contacto-card p {
+    color: #888;
+}
+
+
+/* =====================================================
+   CARRITO
+===================================================== */
+
+.carrito-fondo {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.8);
+
+    display: none;
+
+    justify-content: flex-end;
+
+    z-index: 2000;
+}
+
+.carrito-fondo.activo {
+    display: flex;
+}
+
+.carrito {
+    width: 430px;
+
+    max-width: 95%;
+
+    height: 100%;
+
+    padding: 35px;
+
+    background: #121518;
+
+    overflow-y: auto;
+
+    border-left: 1px solid #333;
+}
+
+.cerrar {
+    float: right;
+
+    background: none;
+
+    border: none;
+
+    color: #aaa;
+
+    font-size: 23px;
+
+    cursor: pointer;
+}
+
+.cerrar:hover {
+    color: #d5a645;
+}
+
+.carrito h2 {
+    margin-bottom: 35px;
+}
+
+.item-carrito {
+    padding: 17px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #292d30;
+}
+
+.item-carrito h4 {
+    margin-bottom: 5px;
+}
+
+.item-carrito p {
+    color: #d5a645;
+}
+
+.eliminar {
+    background: none;
+
+    border: none;
+
+    color: #777;
+
+    cursor: pointer;
+}
+
+.eliminar:hover {
+    color: #e55;
+}
+
+.total {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 25px 0;
+
+    border-top: 1px solid #333;
+
+    margin-top: 20px;
+
+    color: #aaa;
+}
+
+.total strong {
+    color: #d5a645;
+
+    font-size: 24px;
+}
+
+.whatsapp {
+    width: 100%;
+
+    padding: 15px;
+
+    background: #25d366;
+
+    border: none;
+
+    border-radius: 5px;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.whatsapp:hover {
+    background: #1ebe5d;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    padding: 55px 20px;
+
+    text-align: center;
+
+    background: #070809;
+
+    border-top: 1px solid #292d30;
+}
+
+.logo-footer {
+    font-size: 22px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.logo-footer span {
+    color: #d5a645;
+}
+
+footer p {
+    color: #777;
+
+    margin: 8px;
+}
+
+footer small {
+    display: block;
+
+    margin-top: 20px;
+
+    color: #555;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width: 1000px) {
+
+    nav {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .categorias-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media(max-width: 700px) {
+
+    header {
+        padding: 0 4%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .hero {
+        min-height: 600px;
+
+        padding: 60px 7%;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .categorias-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cabecera-tienda {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    #buscador {
+        width: 100%;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .nosotros-contenido {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .nosotros h2 {
+        font-size: 34px;
+    }
+
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .carrito {
+        width: 100%;
+    }
+}
+
+
+@media(max-width: 450px) {
+
+    .boton-carrito {
+        padding: 9px 10px;
+
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .categorias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .producto-abajo {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .producto-abajo strong {
+        text-align: center;
+    }
+
+    .estadisticas {
+        grid-template-columns: 1fr;
+    }
+}
